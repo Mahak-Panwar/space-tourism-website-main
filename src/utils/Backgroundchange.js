@@ -3,7 +3,7 @@ export const backgrounds = {
   home: {
     desktop: "url('/public/assets/home/bg-home-desktop.jpg')",
     mobile: "url('/public/assets/home/bg-home-mobile.jpg')",
-    tablet: "url('/public/assets/home/bg-home-desktop.jpg')",
+    tablet: "url('/public/assets/home/bg-home-tablet.jpg')",
   },
   destination: {
         desktop: "url('/public/assets/destination/bg-destination-desktop.jpg')",

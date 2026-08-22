@@ -4,8 +4,8 @@ const Home = () => {
   return (
     <>
     <div >
-      <div className='flex justify-around items-center h-full flex-col lg:flex-row '>
-        <div className='max-w-2xl text-center lg:text-left mx-1'>
+      <div className='flex justify-around items-center gap-20 h-full flex-col lg:flex-row '>
+        <div className='max-w-2xl text-center lg:text-left mx-1 h-full'>
           <p>SO, YOU WANT TO TRAVEL TO</p>
           <h1 className='text-8xl my-5'>
             SPACE

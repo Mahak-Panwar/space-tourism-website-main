@@ -5,9 +5,13 @@ import { useLocation } from "react-router-dom";
 export default function useBackground({ children }) {
    const location = useLocation()
   const [isMobile, setIsMobile] = useState(window.innerWidth < 430);
-const [isTablet, setIsTablet] = useState(430 < window.innerWidth <780)
+const [isTablet, setIsTablet] = useState(window.innerWidth >= 430 && window.innerWidth < 780);
+
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 430);
+      setIsTablet(window.innerWidth >= 430 && window.innerWidth < 780);
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
