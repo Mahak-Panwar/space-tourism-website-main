@@ -27,8 +27,8 @@ const Navbar = () => {
         
       </div>
       <div className='bg-white/5 backdrop-blur-sm max-w-2xl p-7 lg:w-2xl md:flex justify-evenly items-center gap-8 hidden '>
-        {tabs.map((tab,id) =>{
-              return ( <NavLink key={id}
+        {tabs.map((tab,i) =>{
+              return ( <NavLink key={i}
           to={tab.path}
           className={({ isActive }) =>
             isActive ? "border-b-2 border-blue-500 pb-1 text-sm" : "pb-1 text-xs"
