@@ -50,7 +50,7 @@ const [isTablet, setIsTablet] = useState(window.innerWidth >= 430 && window.inne
       bg= backgrounds.technology.desktop
     }
     }
-  return (<div style={{ backgroundImage: bg, minHeight: "100vh", backgroundSize: "cover" }}>
+  return (<div style={{ backgroundImage: bg, minHeight: "100vh", backgroundSize: "cover" , minWidth:"100vw" }}>
       {children}
     </div>);
 }
