@@ -1,6 +1,7 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
+import React, {useState} from 'react'
+import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [index, setIndex] = useState(0);
   const tabs = [
     {id: "00", 
       title:"HOME", 
@@ -26,19 +27,21 @@ const Navbar = () => {
       <div>
         
       </div>
-      <div className='bg-white/5 backdrop-blur-sm max-w-2xl p-7 lg:w-2xl md:flex justify-evenly items-center gap-8 hidden '>
+      <ul className='bg-white/5 backdrop-blur-sm max-w-2xl h-20 lg:w-2xl md:flex hidden justify-evenly '>
         {tabs.map((tab,i) =>{
-              return ( <NavLink key={i}
-          to={tab.path}
-          className={({ isActive }) =>
-            isActive ? "border-b-2 border-blue-500 pb-1 text-sm" : "pb-1 text-xs"
-          }
-        >
-        <span className='hidden lg:inline-block mx-2'>{tab.id}</span>
-         {tab.title}
-        </NavLink>)
+              return ( <li key={i}  className={` flex items-center ${index=== i ? "border-b-2 md:border-b-3 md:border-r-0 border-r-4 border-white/50 ": ""}`}  >
+                <Link 
+                          to={tab.path}
+                          onClick={() => setIndex(i)} 
+                        className="
+                       h-full flex items-center">
+                        <span className='hidden lg:inline-block mx-2'>{tab.id}</span>
+                         {tab.title}
+                        </Link>
+              </li>)
         })}
-      </div>
+        
+      </ul>
     </div>
   )
 }

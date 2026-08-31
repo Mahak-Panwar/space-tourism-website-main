@@ -9,25 +9,38 @@ const Technology = () => {
       "SPACE CAPSULE"
     ]
   return (
-    <main>
-      <h1 className='uppercase'>
+    <main className='lg:ml-28'>
+      <h1 className='uppercase text-4xl my-24 mb-35 '>
          03 Space launch 101
       </h1>
-      <div>
-        <img src="" alt="" />
-        <div>
-          <div className='flex gap-8'>
-    
-              
-                <button onClick={() => setIndex(0)} className="p-6 rounded-[100%] bg-transparent border-1  focus:bg-white active:bg-white">
-        0
-                </button>
-                <button onClick={() => setIndex(1)} className="p-6 rounded-[100%] bg-transparent border-1 ">
+      <div className='flex lg:flex-row-reverse flex-col gap-10 justify-between'>
+        <picture>
+     <source media="(min-width: 1024px)" srcset={technology[index].images.portrait} width={500} />
+     <img src={technology[index].images.landscape} alt=""  />
+        </picture>
+        
+        <div className='flex flex-col lg:flex-row gap-16 justify-center lg:items-start'>
+          <div className='flex gap-6 justify-center lg:flex-col '>
+                <button onClick={() => setIndex(0)} className={`p-8 text-2xl font-bold rounded-[100%] bg-transparent border-1 
+                  ${index === 0 ? "bg-white text-black" : "bg-black"}`}>
         1
                 </button>
-                <button onClick={() => setIndex(2)} className="p-6 rounded-[100%] bg-transparent border-1 ">
+                <button onClick={() => setIndex(1)} className={`p-8 text-2xl font-bold rounded-[100%] bg-transparent border-1 
+                  ${index === 1 ? "bg-white text-black" : "bg-black"}`}>
         2
                 </button>
+                <button onClick={() => setIndex(2)} className={`p-8 text-2xl font-bold rounded-[100%] bg-transparent border-1  
+                ${index === 2 ? "bg-white text-black" : "bg-black"}`}>
+        3
+                </button>
+                
+          </div>
+          <div className='text-center lg:text-left'>
+            <p className='uppercase'>
+              The terminology...
+            </p>
+            <h2 className='text-6xl my-4'>{technology[index].name}</h2>
+            <p className='lg:max-w-lg mt-8'>{technology[index].description}</p>
           </div>
         </div>
       </div>
