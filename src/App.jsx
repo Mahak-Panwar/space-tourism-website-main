@@ -10,7 +10,7 @@ export default function App() {
     <>
     <Background>
       
-    <div className='h-auto py-12 px-6  text-white'>
+    <div className='h-auto py-36 px-6 text-[#d2d8f9]  '>
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />

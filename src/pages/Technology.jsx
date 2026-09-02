@@ -9,14 +9,14 @@ const Technology = () => {
       "SPACE CAPSULE"
     ]
   return (
-    <main className='lg:ml-28'>
-      <h1 className='uppercase text-4xl my-24 mb-35 '>
-         03 Space launch 101
+    <main className='lg:ml-28 my-24 '>
+      <h1 className='uppercase text-2xl my-24 mb-35 text-center lg:text-left'>
+         <span className='mx-3 text-gray-500'>03</span> Space launch 101
       </h1>
-      <div className='flex lg:flex-row-reverse flex-col gap-10 justify-between'>
-        <picture>
-     <source media="(min-width: 1024px)" srcset={technology[index].images.portrait} width={500} />
-     <img src={technology[index].images.landscape} alt=""  />
+      <div className='flex lg:flex-row-reverse flex-col gap-10 justify-between '>
+        <picture className=' '>
+     <source media="(min-width: 1024px)" srcSet={technology[index].images.portrait} width={500} />
+     <img src={technology[index].images.landscape} width={700} height={600} alt=""  className=' w-full  object-cover'/>
         </picture>
         
         <div className='flex flex-col lg:flex-row gap-16 justify-center lg:items-start'>
@@ -39,7 +39,7 @@ const Technology = () => {
             <p className='uppercase'>
               The terminology...
             </p>
-            <h2 className='text-6xl my-4'>{technology[index].name}</h2>
+            <h2 className='text-6xl my-4 bellefair-regular'>{technology[index].name}</h2>
             <p className='lg:max-w-lg mt-8'>{technology[index].description}</p>
           </div>
         </div>

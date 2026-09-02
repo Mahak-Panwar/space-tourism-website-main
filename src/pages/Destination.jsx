@@ -12,16 +12,16 @@ const Destination = () => {
     "TITAN"
   ]
   return (
-    <div className='flex flex-col px-1'>
-      <h1 className='text-2xl self-start mb-12'>01
+    <div className='flex flex-col px-1 my-24'>
+      <h1 className='text-2xl md:self-start mb-12 text-center md:ml-24'><span className='mx-3 text-gray-500'>01</span>
         PICK YOUR DESTINATION</h1>
 
 
       <div className='my-8  text-center
-       lg:flex justify-around items-center'>
+       lg:flex justify-around items-center '>
         <img src={destination[index].images.png} alt="" width={
-          500} height={400}  className='mx-1'/>
-        <div className='flex flex-col  items-center lg:items-start lg:mx-2'>
+          500} height={400}  className='mx-auto lg:mx-1'/>
+        <div className='flex flex-col  items-center lg:items-start lg:mx-2 '>
           <div className='flex gap-2 sm:gap-8'>
             {tabs.map((tab, i) => {
               return (

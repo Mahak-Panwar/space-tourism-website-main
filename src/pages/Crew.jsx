@@ -11,9 +11,9 @@ const Crew = () => {
     "ANOUSHEH ANSARI"
   ]
   return (
-    <main className='md:mx-20 mx-auto'>
-      <h1 className='uppercase md:text-4xl text-xl mb-16 text-center md:text-left'>
-        02 Meet your crew
+    <main className='md:mx-20 mx-auto my-24'>
+      <h1 className='uppercase md:text-2xl text-xl mb-16 text-center md:text-left md:*:ml-24'>
+        <span className='mx-3 text-gray-500'>02</span> Meet your crew
       </h1>
       <div className='my-8 text-center
        px-11 flex flex-col-reverse  gap-2 sm:flex-col  lg:flex-row justify-between items-center '>

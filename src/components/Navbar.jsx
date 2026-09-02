@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
-  const [index, setIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
   const tabs = [
     {id: "00", 
       title:"HOME", 
@@ -21,27 +21,36 @@ const Navbar = () => {
     },
   ]
   return (
-    <div className='flex p-2 mb-24 text-white justify-between items-center w-full '>
-      <img src="/public/assets/shared/logo.svg" alt="log" />
+    <div className='flex text-white justify-between items-center w-[calc(100%-10px)] absolute md:top-0 lg:top-10 top-10 overflow-hidden '>
+      <NavLink to="/" ><img src="/public/assets/shared/logo.svg" alt="log" className="md:ml-10 self-start md:self-center"/></NavLink>
       <div className="xl:block hidden bg-white/25 h-px md:flex-1 xl:-mr-10 xl:ml-20 z-20 "></div>
-      <div>
-        
-      </div>
-      <ul className='bg-white/5 backdrop-blur-sm max-w-2xl h-20 lg:w-2xl md:flex hidden justify-evenly '>
-        {tabs.map((tab,i) =>{
-              return ( <li key={i}  className={` flex items-center ${index=== i ? "border-b-2 md:border-b-3 md:border-r-0 border-r-4 border-white/50 ": ""}`}  >
-                <Link 
-                          to={tab.path}
-                          onClick={() => setIndex(i)} 
-                        className="
-                       h-full flex items-center">
-                        <span className='hidden lg:inline-block mx-2'>{tab.id}</span>
-                         {tab.title}
-                        </Link>
-              </li>)
-        })}
-        
-      </ul>
+      <button>
+        <img src="/assets/shared/icon-hamburger.svg" alt="" className='mr-10 md:hidden' onClick={() => setIsOpen(true)}/>
+      </button>
+<div className='bg-white/5 backdrop-blur-sm not-md:fixed top-0 right-0 h-fit lg:max-w-2xl md:mr-5 lg:mr-0'>
+       <img src="/assets/shared/icon-close.svg" alt="" width={25} className={` ${(isOpen ? "ml-[80%] md:hidden pt-2.5":"hidden" )}`} onClick={() => setIsOpen(false)}/>
+        <ul className='  md:h-28 lg:w-2xl flex flex-col  sm:gap-10 md:flex-row justify-evenly lg:gap-0 h-screen px-1.5'>
+   
+          {tabs.map((tab,i) =>{
+                return ( 
+  
+                <li key={i}  className={` flex items-center px-16 md:p-1 ${isOpen ? "": "not-md:hidden"
+  
+                }`}  >
+                  <NavLink
+                            to={tab.path}
+  
+                          className={({isActive}) =>
+                         `h-full flex items-center ${isActive ?"border-b-2 md:border-b-3 border-white/50": ""}`}>
+                          <span className='hidden lg:inline-block mx-2'>{tab.id}</span>
+                           {tab.title}
+                          </NavLink>
+                </li>
+                )
+          })}
+  
+        </ul>
+</div>
     </div>
   )
 }
