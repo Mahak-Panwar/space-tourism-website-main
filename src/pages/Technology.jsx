@@ -1,5 +1,7 @@
+
 import React,{useState} from 'react'
 import { data } from "../utils/data.js";
+import { motion } from "framer-motion";
 const Technology = () => {
   const [index, setIndex] = useState(0);
     let technology = data[0].technology;
@@ -9,14 +11,29 @@ const Technology = () => {
       "SPACE CAPSULE"
     ]
   return (
-    <main className='lg:ml-28 my-24 '>
-      <h1 className='uppercase text-2xl my-24 mb-35 text-center lg:text-left'>
+    <motion.main className='lg:ml-28 my-24 '   initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.6 }}>
+      <h1 className='uppercase text-2xl my-24 mb-35 text-center lg:text-left text-[#dfe1e9]'>
          <span className='mx-3 text-gray-500'>03</span> Space launch 101
       </h1>
       <div className='flex lg:flex-row-reverse flex-col gap-10 justify-between '>
-        <picture className=' '>
-     <source media="(min-width: 1024px)" srcSet={technology[index].images.portrait} width={500} />
-     <img src={technology[index].images.landscape} width={700} height={600} alt=""  className=' w-full  object-cover'/>
+        <picture className=' ' >
+     <motion.source media="(min-width: 1024px)" srcSet={technology[index].images.portrait} width={500}   key={technology[index].images.portrait} // key change triggers animation
+    
+    alt={technology[index].name}
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -50 }}
+    transition={{ duration: 0.5 }}/>
+     <motion.img src={technology[index].images.landscape} width={700} height={600} key={technology[index].images.landscape} // key change triggers animation
+    
+    alt={technology[index].name}
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -50 }}
+    transition={{ duration: 0.5 }}  className=' w-full  object-cover'/>
         </picture>
         
         <div className='flex flex-col lg:flex-row gap-16 justify-center lg:items-start'>
@@ -39,12 +56,12 @@ const Technology = () => {
             <p className='uppercase'>
               The terminology...
             </p>
-            <h2 className='text-6xl my-4 bellefair-regular'>{technology[index].name}</h2>
+            <h2 className='text-6xl my-4 bellefair-regular text-white'>{technology[index].name}</h2>
             <p className='lg:max-w-lg mt-8'>{technology[index].description}</p>
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   )
 }
 

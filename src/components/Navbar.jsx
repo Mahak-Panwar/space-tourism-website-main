@@ -27,10 +27,10 @@ const Navbar = () => {
       <button>
         <img src="/assets/shared/icon-hamburger.svg" alt="" className='mr-10 md:hidden' onClick={() => setIsOpen(true)}/>
       </button>
-<div className='bg-white/5 backdrop-blur-sm not-md:fixed top-0 right-0 h-fit lg:max-w-2xl md:mr-5 lg:mr-0'>
+<div className='bg-white/5 backdrop-blur-sm not-md:fixed top-0 right-0 h-fit lg:max-w-3xl md:mr-5 lg:mr-0'>
        <img src="/assets/shared/icon-close.svg" alt="" width={25} className={` ${(isOpen ? "ml-[80%] md:hidden pt-2.5":"hidden" )}`} onClick={() => setIsOpen(false)}/>
-        <ul className='  md:h-28 lg:w-2xl flex flex-col  sm:gap-10 md:flex-row justify-evenly lg:gap-0 h-screen px-1.5'>
-   
+        <ul className='  md:h-28 lg:w-3xl flex flex-col  sm:gap-10 md:flex-row justify-evenly lg:justify-center lg:gap-4 h-screen px-1.5'>
+     {/* <li className='hidden lg:block w-1/12'></li> */}
           {tabs.map((tab,i) =>{
                 return ( 
   
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </li>
                 )
           })}
-  
+
         </ul>
 </div>
     </div>
