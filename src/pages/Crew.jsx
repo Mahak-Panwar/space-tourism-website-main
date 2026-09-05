@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { data } from "../utils/data.js";
+import  data  from "../utils/data.js";
 import { motion } from "framer-motion";
 const Crew = () => {
   const [index, setIndex] = useState(0);

@@ -1,4 +1,4 @@
-export  const data =[
+ const data =[
   {
   destinations: [
     {
@@ -106,3 +106,5 @@ export  const data =[
     }
   ]
 }]
+
+export default data;
