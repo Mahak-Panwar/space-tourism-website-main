@@ -19,7 +19,7 @@ const Technology = () => {
          <span className='mx-3 text-gray-500'>03</span> Space launch 101
       </h1>
       <div className='flex lg:flex-row-reverse flex-col gap-10 justify-between '>
-        <picture className=' ' >
+        <picture  >
      <motion.source media="(min-width: 1024px)" srcSet={technology[index].images.portrait} width={500}   key={technology[index].images.portrait} // key change triggers animation
     
     alt={technology[index].name}
