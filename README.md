@@ -1,34 +1,69 @@
-# React + Vite
+# Frontend Mentor - Space tourism website solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## React Compiler
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+### The challenge
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Users should be able to:
 
-project-root/
-  public/
-    assets/
-      destination/
-        image-moon.png
-      crew/
-        image-douglas-hurley.png
-      technology/
-        image-launch-vehicle-portrait.jpg
-  src/
-    pages/
-      Crew.jsx
-      Destination.jsx
-    utils/
-      data.js
-    components/
-      Navbar.jsx
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
+
+### Screenshot
+
+![](./public/Preview-page.jpeg)
+
+
+### Links
+
+- Solution URL: [Solution URL](https://github.com/Mahak-Panwar/space-tourism-website-main.git)
+- Live Site URL: [Live Site URL](https://space-tourism-website-main-mahak-panwars-projects.vercel.app/)
+
+### My process 
+## Built with
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Framer Motion for animations
+- React + React Router Dom
+- Tailwind CSS for styling
+- Vite as build tool
+
+## What I learned
+- How to structure a multipage React project with routing.
+- Using Tailwind CSS with custom components for responsive design.
+- Implementing animations with Framer Motion.
+- Handling assets and case sensitivity issues during deployment (important for Vercel/Linux environments).
+
+## Continued development
+- Improve accessibility (ARIA roles, keyboard navigation).
+- Add more advanced animations and transitions.
+- Explore Next.js for server-side rendering and SEO improvements.
+- Optimize images and assets for faster load times.
+
+
+### Author
+Frontend Mentor – [Mahak-Panwar](https://www.frontendmentor.io/profile/Mahak-Panwar)
+
+### Acknowledgments
+Thanks to Frontend Mentor for providing this challenge, and to the developer community for resources and inspiration during the build.
