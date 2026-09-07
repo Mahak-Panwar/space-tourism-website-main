@@ -22,7 +22,7 @@ const Navbar = () => {
   ]
   return (
     <div className='flex text-white justify-between items-center w-[calc(100%-10px)] absolute md:top-0 lg:top-10 top-10 overflow-hidden '>
-      <NavLink to="/" ><img src="/public/assets/shared/logo.svg" alt="log" className="md:ml-10 self-start md:self-center"/></NavLink>
+      <NavLink to="/" ><img src="/assets/shared/logo.svg" alt="log" className="md:ml-10 self-start md:self-center"/></NavLink>
       <div className="xl:block hidden bg-white/25 h-px md:flex-1 xl:-mr-10 xl:ml-20 z-20 "></div>
       <button>
         <img src="/assets/shared/icon-hamburger.svg" alt="" className='mr-10 md:hidden' onClick={() => setIsOpen(true)}/>
