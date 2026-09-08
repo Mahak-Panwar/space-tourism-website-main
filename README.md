@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/Mahak-Panwar/space-tourism-website-main.git)
-- Live Site URL: [Live Site URL](https://space-tourism-website-main-mahak-panwars-projects.vercel.app/)
+- Live Site URL: [Live Site URL](https://space-tourism-website-main-nkumvp22q-mahak-panwars-projects.vercel.app?_vercel_share=dHhnAkUNOu4IM1EhB2cZa5zksSEfssXA)
 
 ### My process 
 ## Built with
